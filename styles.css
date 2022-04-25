@@ -10,7 +10,17 @@
     background-color: #A519FA;
 }
 
-#headshot {
+#right-headshot {
     border-radius: 50%;
-    margin: 30% 25% 0 20%;
+}
+
+.right-intro {
+    display: flex;
+    margin: 15% 0 0 20%;
+    width: 100%;
+}
+
+.right-intro-info {
+    margin: 10% 0 5% 10%;
+    width: 20%;
 }
