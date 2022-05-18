@@ -1,26 +1,44 @@
-.container{
-    display: flex;
+* {
+    margin: 0;
 }
 
-.nav-list {
+#navbar {
     list-style-type: none;
+    overflow: hidden;
 }
 
-.left {
+#nav-list-container {
     background-color: #A519FA;
+    height: 100vh;
+    width: 20%;
 }
 
-#right-headshot {
+#nav-list-container > #navbar > li a {
+    display: block;
+    padding: 20% 20%;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky {
+    padding-top: 60px;
+}
+
+#right-header-headshot {
     border-radius: 50%;
 }
 
-.right-intro {
+.right-header-intro {
     display: flex;
     margin: 15% 0 0 20%;
     width: 100%;
 }
 
-.right-intro-info {
+.right-header-intro-info {
     margin: 10% 0 5% 10%;
     width: 20%;
 }
