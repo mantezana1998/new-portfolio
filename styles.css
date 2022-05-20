@@ -11,7 +11,7 @@ body {
 /* Nav Bar */
 
 #navbar-container {
-    background-color: #AB46D2;
+    background-color: #F30E5C;
     height: 100vh;
     width: 20%;
     grid-area: nav;
@@ -20,12 +20,17 @@ body {
 #navbar {
     list-style-type: none;
     overflow: hidden;
+    font-weight: bold;
+}
+
+#navbar > li > a {
+    text-decoration: none;
 }
 
 #navbar-container > #navbar > li a {
     display: block;
     border: 15%;
-    padding: 15%;
+    padding: 20%;
 }
 
 .sticky {
@@ -38,23 +43,146 @@ body {
     padding-top: 60px;
 }
 
-/* Right of Nav Bar */
+/* Name Introduction */
 
 main {
     grid-area: main;
 }
 
-.header-intro {
-    display: flex;
-    margin: 15% 0 0 20%;
-    width: 100%;
+.intro {
+    height: 100vh;
+    background-color: #228C7B;
+    font-size: 3em;
+    text-align:center;
 }
 
-#right-header-headshot {
+#intro-name {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+/* About Me */
+
+.about-me-container {
+    background-color: #F6C523;
+    text-align: center;
+}
+
+.about-me {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 7% 7% 0 0;
+    height: auto;
+}
+
+.about-me-paragraph {
+    width: 50%;
+    margin-left: 10%;
+}
+
+/* Skills  */
+
+.skills-container {
+    background-color: #F6F3A7;
+}
+
+.skills-list {
+    list-style-type: none;
+}
+
+/* Projects */
+
+.projects-container {
+    background-color: #228C7B
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin-block: 2rem;
+    gap: 2rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: clamp(20rem, calc(20rem + 2vw), 22rem);
+    overflow: hidden;
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+    background: #ECE9E6;
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+}
+
+
+
+.card__body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+
+.tag {
+    align-self: flex-start;
+    padding: .25em .75em;
+    border-radius: 1em;
+    font-size: .75rem;
+}
+
+.tag + .tag {
+    margin-left: .5em;
+}
+
+.tag-blue {
+    background: #56CCF2;
+    background: linear-gradient(to bottom, #2F80ED, #56CCF2);
+    color: #fafafa;
+}
+
+.tag-brown {
+    background: #D1913C;
+    background: linear-gradient(to bottom, #FFD194, #D1913C);
+    color: #fafafa;
+}
+
+.tag-red {
+    background: #cb2d3e;
+    background: linear-gradient(to bottom, #ef473a, #cb2d3e);
+    color: #fafafa;
+}
+
+.card__body h4 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.card__footer {
+    display: flex;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+.user {
+    display: flex;
+    gap: .5rem;
+}
+
+.user__image {
     border-radius: 50%;
 }
 
-.right-header-intro-info {
-    margin: 10% 0 5% 10%;
-    width: 20%;
+.user__info > small {
+    color: #666;
 }
