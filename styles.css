@@ -124,15 +124,12 @@ img {
     background: linear-gradient(to right, #FFFFFF, #ECE9E6);
 }
 
-
-
 .card__body {
     padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: .5rem;
 }
-
 
 .tag {
     align-self: flex-start;
@@ -185,4 +182,15 @@ img {
 
 .user__info > small {
     color: #666;
+}
+
+/* Contact  */
+
+.contact-container {
+    background-color: #F6C523;
+    display: flex;
+}
+
+.contact-info, .contact-form {
+    margin: 10% 10% 10% 0; 
 }
