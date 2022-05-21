@@ -15,11 +15,11 @@ body {
     height: 100vh;
     width: 20%;
     grid-area: nav;
+    
 }
 
 #navbar {
     list-style-type: none;
-    overflow: hidden;
     font-weight: bold;
 }
 
@@ -27,10 +27,14 @@ body {
     text-decoration: none;
 }
 
+#navbar > li > a:hover {
+    color: white;
+}
+
 #navbar-container > #navbar > li a {
     display: block;
     border: 15%;
-    padding: 20%;
+    padding: 15%;
 }
 
 .sticky {
@@ -50,8 +54,11 @@ main {
 }
 
 .intro {
+    background: url(https://i.imgur.com/VXHoX3Y.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    filter: brightness(70%);
     height: 100vh;
-    background-color: #228C7B;
     font-size: 3em;
     text-align:center;
 }
@@ -59,7 +66,8 @@ main {
 #intro-name {
     display: block;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+    margin-top: auto;
 }
 
 /* About Me */
@@ -192,5 +200,5 @@ img {
 }
 
 .contact-info, .contact-form {
-    margin: 10% 10% 10% 0; 
+    margin: 10% 15% 10% 0; 
 }
