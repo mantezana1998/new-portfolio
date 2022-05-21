@@ -1,3 +1,13 @@
+:root {
+    --dark-purple: #8946A6;
+    --medium-purple: #B762C1;
+    --purple: #EA99D5;
+    --pink: #CE7BB0;
+    --light-purple: #FFCDDD;
+    --mauve: #C996CC;
+    --white: white;
+}
+
 * {
     margin: 0;
 }
@@ -11,7 +21,7 @@ body {
 /* Nav Bar */
 
 #navbar-container {
-    background-color: #F30E5C;
+    background-color: var(--light-purple);
     height: 100vh;
     width: 20%;
     grid-area: nav;
@@ -28,7 +38,8 @@ body {
 }
 
 #navbar > li > a:hover {
-    color: white;
+    color: black;
+    font-size: 24px;
 }
 
 #navbar-container > #navbar > li a {
@@ -57,7 +68,6 @@ main {
     background: url(https://i.imgur.com/VXHoX3Y.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    filter: brightness(70%);
     height: 100vh;
     font-size: 3em;
     text-align:center;
@@ -73,7 +83,8 @@ main {
 /* About Me */
 
 .about-me-container {
-    background-color: #F6C523;
+    /* background-color: var(--pink); */
+    background: linear-gradient(to top, var(--mauve) 0%, var(--pink) 100%);
     text-align: center;
 }
 
@@ -93,7 +104,8 @@ main {
 /* Skills  */
 
 .skills-container {
-    background-color: #F6F3A7;
+    /* background-color: var(--mauve); */
+    background: linear-gradient(to top, var(--purple) 0%, var(--mauve) 100%);
 }
 
 .skills-list {
@@ -103,7 +115,7 @@ main {
 /* Projects */
 
 .projects-container {
-    background-color: #228C7B
+    background-color: var(--purple)
 }
 
 .projects {
@@ -111,7 +123,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1200px;
-    margin-block: 2rem;
+    /* margin-block: 2rem; */
     gap: 2rem;
 }
 
@@ -195,7 +207,8 @@ img {
 /* Contact  */
 
 .contact-container {
-    background-color: #F6C523;
+    /* background-color: var(--medium-purple); */
+    background: linear-gradient(to top, var(--medium-purple) 0%, var(--purple) 100%);
     display: flex;
 }
 
