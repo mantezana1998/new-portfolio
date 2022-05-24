@@ -6,6 +6,7 @@
     --light-purple: #FFCDDD;
     --mauve: #C996CC;
     --white: white;
+    --black: #000000;
 }
 
 * {
@@ -39,7 +40,7 @@ body {
 
 #navbar > li > a:hover {
     color: black;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 #navbar-container > #navbar > li a {
@@ -70,46 +71,121 @@ main {
     background-size: 100% 100%;
     height: 100vh;
     font-size: 3em;
-    text-align:center;
+    text-align: center;
+    position: relative;
 }
 
 #intro-name {
-    display: block;
+    position: absolute;
     margin-left: auto;
     margin-right: auto;
-    margin-top: auto;
+    left: 0;
+    right: 0;
+    top: 25%;
+    text-align: center;
+    -webkit-text-stroke: 2px white;
 }
 
 /* About Me */
 
 .about-me-container {
-    /* background-color: var(--pink); */
     background: linear-gradient(to top, var(--mauve) 0%, var(--pink) 100%);
     text-align: center;
+    position: relative;
 }
 
 .about-me {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin: 7% 7% 0 0;
     height: auto;
+}
+
+.about-me-container > h1 {
+    z-index: auto;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 10%;
+    text-align: center;
+}
+
+#headshot-picture {
+    border-radius: 25%;
 }
 
 .about-me-paragraph {
     width: 50%;
-    margin-left: 10%;
+    margin-left: 7%;
+}
+
+.about-me-paragraph, #headshot-picture {
+    margin-top: 15%;
+}
+
+#about-me-icons {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 /* Skills  */
 
 .skills-container {
-    /* background-color: var(--mauve); */
     background: linear-gradient(to top, var(--purple) 0%, var(--mauve) 100%);
 }
 
-.skills-list {
-    list-style-type: none;
+.skills-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.skills-card {
+    width: 20%;
+    border-radius: 25%;
+    border: 1px solid #ccc;
+    margin-bottom: 50px;
+    transition: 0.3s;
+}
+
+.card-header {
+    border-radius: 25%;
+    text-align: center;
+    padding: 50px 10px;
+    background-color: var(--medium-purple);
+    color: var(--white);
+}
+
+.skills-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 1000px) {
+    .skills-card {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    
+    .skills-container {
+        width: 100%;
+    }
+
+    .card-header {
+        padding: 20px;
+        font-size: 20px;
+    }
+    
+    .skills-card {
+        width: 80%;
+    }
 }
 
 /* Projects */
@@ -133,7 +209,7 @@ img {
     object-fit: cover;
 }
 
-.card {
+.project-card {
     display: flex;
     flex-direction: column;
     width: clamp(20rem, calc(20rem + 2vw), 22rem);
@@ -144,7 +220,8 @@ img {
     background: linear-gradient(to right, #FFFFFF, #ECE9E6);
 }
 
-.card__body {
+.project-body {
+    /* background-color: var(--mauve); */
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -180,27 +257,23 @@ img {
     color: #fafafa;
 }
 
-.card__body h4 {
+.project-body h4 {
     font-size: 1.5rem;
     text-transform: capitalize;
 }
 
-.card__footer {
+.project-footer {
     display: flex;
     padding: 1rem;
     margin-top: auto;
 }
 
-.user {
+.tech-stack {
     display: flex;
     gap: .5rem;
 }
 
-.user__image {
-    border-radius: 50%;
-}
-
-.user__info > small {
+.tech-stack-info > small {
     color: #666;
 }
 
