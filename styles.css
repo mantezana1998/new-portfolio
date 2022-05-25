@@ -1,4 +1,5 @@
 :root {
+    --darker-purple: #8021a9;
     --dark-purple: #8946A6;
     --medium-purple: #B762C1;
     --purple: #EA99D5;
@@ -17,6 +18,7 @@ body {
     display: grid;
     grid-template-columns: 20% 80%;
     grid-template-areas: "nav main";
+    background: linear-gradient(to top, var(--mauve));
 }
 
 /* Nav Bar */
@@ -81,7 +83,7 @@ main {
     margin-right: auto;
     left: 0;
     right: 0;
-    top: 25%;
+    top: 30%;
     text-align: center;
     -webkit-text-stroke: 2px white;
 }
@@ -104,12 +106,8 @@ main {
 .about-me-container > h1 {
     z-index: auto;
     position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
     top: 10%;
-    text-align: center;
+    font-size: 40px;
 }
 
 #headshot-picture {
@@ -119,6 +117,10 @@ main {
 .about-me-paragraph {
     width: 50%;
     margin-left: 7%;
+}
+
+.about-me-paragraph > p {
+    font-weight: bold;
 }
 
 .about-me-paragraph, #headshot-picture {
@@ -132,10 +134,30 @@ main {
     justify-content: space-evenly;
 }
 
+#about-me-icons > a {
+    color: var(--darker-purple) !important;
+}
+
 /* Skills  */
 
 .skills-container {
     background: linear-gradient(to top, var(--purple) 0%, var(--mauve) 100%);
+    position: relative;
+}
+
+.skills-container > h1 {
+    z-index: auto;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 8%;
+    font-size: 40px;
+}
+
+.skills {
+    padding-top: 20%;
 }
 
 .skills-row {
@@ -194,13 +216,23 @@ main {
     background-color: var(--purple)
 }
 
+.projects-container > h1 {
+    font-size: 40px;
+    padding-top: 5%;
+}
+
+.projects-container > .projects > a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1200px;
-    /* margin-block: 2rem; */
     gap: 2rem;
+    margin-top: 10%;
 }
 
 img {
@@ -212,7 +244,7 @@ img {
 .project-card {
     display: flex;
     flex-direction: column;
-    width: clamp(20rem, calc(20rem + 2vw), 22rem);
+    width: clamp(15rem, calc(20rem + 2vw), 17rem);
     overflow: hidden;
     box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
     border-radius: 1em;
@@ -221,7 +253,6 @@ img {
 }
 
 .project-body {
-    /* background-color: var(--mauve); */
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -280,11 +311,122 @@ img {
 /* Contact  */
 
 .contact-container {
-    /* background-color: var(--medium-purple); */
+    background-color: var(--medium-purple);
     background: linear-gradient(to top, var(--medium-purple) 0%, var(--purple) 100%);
+}
+
+.contact {
     display: flex;
 }
 
-.contact-info, .contact-form {
-    margin: 10% 15% 10% 0; 
+.contact-title {
+    flex: 1;
+    padding: 50px;
+}
+
+.contact-title.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-title {
+    position: relative;
+    color: var(--darker-purple);
+    font-size: 26px;
+}
+
+.app-title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 25px;
+    height: 4px;
+    background: var(--darker-purple);
+}
+
+.app-contact {
+    margin-top: auto;
+    font-size: 17px;
+    color: var(--darker-purple);
+    font-weight: bold;
+}
+
+.app-form-group {
+    margin-bottom: 15px;
+}
+
+.app-form-group.message {
+    margin-top: 40px;
+}
+
+.app-form-group.buttons {
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.app-form-control {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--black);
+    color: var(--black);
+    font-size: 18px;
+    outline: none;
+    transition: border-color .2s;
+}
+
+.app-form-control::placeholder {
+    color: var(--darker-purple);
+}
+
+.app-form-control:focus {
+    border-bottom-color: #ddd;
+}
+
+.app-form-button {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+.app-form-button:hover {
+    color: var(--black);
+}
+
+@media screen and (max-width: 520px) {
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-title.left {
+        margin-bottom: 30px;
+    }
+
+    .app-title {
+        flex-direction: row;
+    }
+
+    .app-title h1 {
+        margin-right: 12px;
+    }
+
+    .app-title:after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact {
+        padding: 40px;
+    }
+
+    .contact-title {
+        padding: 0;
+    }
 }
