@@ -48,6 +48,7 @@ body {
 
 #navbar > li > a {
     text-decoration: none;
+    color: var(--darker-purple);
 }
 
 #navbar > li > a:hover {
@@ -73,7 +74,7 @@ body {
 
 @media screen and (min-width: 1500px) {
     #navbar > li > a {
-        /* color: black; */
+        color: var(--darker-purple);
         font-size: 30px;
     }
 
@@ -90,6 +91,11 @@ body {
 }
 
 @media screen and (min-width: 2000px) {
+    #navbar > li > a {
+        color: var(--darker-purple);
+        font-size: 30px;
+    }
+    
     #navbar-container > #navbar > li a {
         display: block;
         border: 15%;
