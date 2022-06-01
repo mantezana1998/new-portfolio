@@ -18,15 +18,9 @@
 
 body {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 15% 85%;
     grid-template-areas: "nav main";
     background: linear-gradient(to top, var(--mauve));
-}
-
-@media screen and (max-width: 1200px) {
-    * {
-        color: green;
-    }
 }
 
 /* Whole Website End */
@@ -36,7 +30,7 @@ body {
 #navbar-container {
     background-color: var(--light-purple);
     height: 100vh;
-    width: 20%;
+    width: 15%;
     grid-area: nav;
     
 }
@@ -56,10 +50,11 @@ body {
     font-size: 22px;
 }
 
-#navbar-container > #navbar > li a {
-    display: block;
-    border: 15%;
-    padding: 15%;
+#navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin: 5%;
 }
 
 .sticky {
@@ -83,10 +78,11 @@ body {
         font-size: 33px;
     }
 
-    #navbar-container > #navbar > li a {
-        display: block;
-        border: 15%;
-        padding: 20%;
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        gap: 140px;
+        margin: 10%;
     }
 }
 
@@ -95,24 +91,17 @@ body {
         color: var(--darker-purple);
         font-size: 30px;
     }
-    
-    #navbar-container > #navbar > li a {
-        display: block;
-        border: 15%;
-        padding-left: 35%;
-        padding-top: 20%;
-    }
 
     #navbar > li > a:hover {
         color: black;
         font-size: 33px;
     }
     
-    #navbar-container > #navbar > li a {
-        display: block;
-        border: 15%;
-        padding-left: 30%;
-        padding-top: 25%;
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        gap: 200px;
+        margin: 17%;
     }
 }
 
